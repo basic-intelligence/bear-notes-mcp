@@ -38,7 +38,7 @@ Example prompts:
 
 **Prerequisites**: [Bear app](https://bear.app/) must be installed and [Claude Desktop](https://claude.ai/download) must be installed.
 
-1. Download the latest `bear-notes-mcpb.mcpb` extension from releases
+1. Download the latest `bear-notes-mcpb.mcpb` extension from [Releases](https://github.com/vasylenko/bear-notes-mcp/releases)
 2. Make sure your Claude Desktop is running (start if not)
 3. Doubleclick on the extension file – Claude Desktop should show you the installation prompt
 
@@ -176,8 +176,13 @@ This server reads your Bear Notes SQLite database directly for search/read opera
 macOS only because Bear desktop works only on macOS.
 
 ### Logs
+
+**Claude Desktop:**
 - MCP server logs go into `~/Library/Logs/Claude/main.log`, look for `bear-notes-mcp`
 - MCP transport logs go to `~/Library/Logs/Claude/mcp-server-Bear\ Notes.log`
+
+**Standalone MCP server:**
+- Logs are written to stderr; enable debug logging with `UI_DEBUG_TOGGLE=true`
 
 ## FAQ
 

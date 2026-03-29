@@ -49,7 +49,9 @@
     "notes management",
     "productivity",
     "typescript",
-    "mcp"
+    "mcp",
+    "mcp-server",
+    "ai-assistant"
   ],
   "author": {
     "name": "Serhii Vasylenko",
