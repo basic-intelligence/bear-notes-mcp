@@ -54,16 +54,19 @@ Use Bear Notes as a full plugin in Claude Code or Cowork — includes best-pract
 
 **Prerequisites**: [Bear app](https://bear.app/) must be installed, Node.js 24.13.0+
 
-```bash
-claude --plugin-dir /path/to/bear-notes-plugin
 ```
+/plugin marketplace add basic-intelligence/bear-notes-plugin
+/plugin install bear-notes@bear-notes-plugin
+```
+
+Then run `/bear-notes:setup` to verify your environment.
 
 The plugin bundles this MCP server with:
 - **Bear Notes skill** — search strategy, section targeting, tag conventions, verify-after-write patterns, and safety guidance
 - **Setup skill** — run `/bear-notes:setup` to verify your environment and configure options
 - **Plugin settings** — debug logging, new note convention, and content replacement toggle managed through Claude's plugin UI
 
-See the [bear-notes-plugin](../bear-notes-plugin/) directory for the full plugin source.
+See the [bear-notes-plugin](https://github.com/basic-intelligence/bear-notes-plugin) repo for the full plugin source.
 
 ### Standalone MCP Server
 
