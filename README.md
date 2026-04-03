@@ -54,20 +54,26 @@ Use Bear Notes as a full plugin in Claude Code or Cowork — includes best-pract
 
 **Prerequisites**: [Bear app](https://bear.app/) must be installed, Node.js 24.13.0+
 
-```bash
-claude --plugin-dir /path/to/bear-notes-plugin
 ```
+/plugin marketplace add basic-intelligence/bear-notes-plugin
+/plugin install bear-notes@bear-notes-plugin
+```
+
+Then run `/bear-notes:setup` to verify your environment.
 
 The plugin bundles this MCP server with:
 - **Bear Notes skill** — search strategy, section targeting, tag conventions, verify-after-write patterns, and safety guidance
 - **Setup skill** — run `/bear-notes:setup` to verify your environment and configure options
 - **Plugin settings** — debug logging, new note convention, and content replacement toggle managed through Claude's plugin UI
 
-See the [bear-notes-plugin](../bear-notes-plugin/) directory for the full plugin source.
+See the [bear-notes-plugin](https://github.com/basic-intelligence/bear-notes-plugin) repo for the full plugin source.
 
-### Standalone MCP Server
+### Claude.ai (web) & Claude Mobile
 
-Want to use this Bear Notes MCP server with Cursor, Codex, or other AI assistants?
+> [!NOTE]
+> Not supported. Bear Notes MCP requires local access to Bear's SQLite database on your Mac. Claude.ai's [custom connectors](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp) use remote MCP servers hosted on the public internet — they can't reach your local filesystem. This is a fundamental constraint of local-only tools, not a missing feature.
+
+### Other AI Assistants (Cursor, Codex, etc.)
 
 **Requirements**: Node.js 24.13.0+
 
@@ -77,7 +83,7 @@ Want to use this Bear Notes MCP server with Cursor, Codex, or other AI assistant
 claude mcp add bear-notes --transport stdio -- npx -y bear-notes-mcp@latest
 ```
 
-#### Other AI Assistants
+#### Cursor, Codex, and other MCP clients
 
 Add to your MCP configuration file:
 ```json
